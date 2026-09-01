@@ -1,4 +1,4 @@
-# 🏛️ PRAMAAN (BlueMesh) — Deep Technical Architecture & Fraud Detection Engine
+# 🏛️ BlueMesh — Deep Technical Architecture & Fraud Detection Engine
 
 This document provides a comprehensive technical breakdown of the mesh routing logic, cryptographic proof protocol, fraud detection algorithms, and API specifications.
 
@@ -163,5 +163,5 @@ If an administrator modifies a record, the change is recorded as an `ADMIN_OVERR
 ---
 
 <div align="center">
-  <b>PRAMAAN BlueMesh • Architecture Document • SIH 2026</b>
+  <b>BlueMesh • Architecture Document • SIH 2026</b>
 </div>

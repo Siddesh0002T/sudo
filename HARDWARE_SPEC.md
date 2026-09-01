@@ -1,6 +1,6 @@
-# 🛠️ PRAMAAN (BlueMesh) — Hardware Engineering Specification
+# 🛠️ BlueMesh — Hardware Engineering Specification
 
-This document details the embedded hardware design, microcontroller pinouts, communication protocols, radio power optimization, and bill of materials for the PRAMAAN BlueMesh system.
+This document details the embedded hardware design, microcontroller pinouts, communication protocols, radio power optimization, and bill of materials for the BlueMesh system.
 
 ---
 
