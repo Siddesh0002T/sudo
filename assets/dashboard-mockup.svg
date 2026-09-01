@@ -1,0 +1,260 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 580" width="100%" height="100%">
+  <defs>
+    <!-- Light Canvas Gradient -->
+    <linearGradient id="lightDashBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F8FAFC" />
+    </linearGradient>
+
+    <linearGradient id="lightCardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F8FAFC" />
+    </linearGradient>
+
+    <linearGradient id="lightAlertGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF5F5" />
+      <stop offset="100%" stop-color="#FEF2F2" />
+    </linearGradient>
+
+    <filter id="dashShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <style>
+    .dash-text { font-family: 'Segoe UI', system-ui, sans-serif; }
+    .mono-text { font-family: 'JetBrains Mono', 'Fira Code', monospace; }
+  </style>
+
+  <!-- Main Window Frame -->
+  <rect width="1100" height="580" rx="14" fill="url(#lightDashBg)" stroke="#CBD5E1" stroke-width="1.5"/>
+
+  <!-- Window Header Bar -->
+  <rect width="1100" height="46" rx="14" fill="#F1F5F9"/>
+  <path d="M0 46 H1100" stroke="#CBD5E1" stroke-width="1"/>
+  
+  <!-- Window Controls -->
+  <circle cx="28" cy="23" r="6" fill="#EF4444"/>
+  <circle cx="48" cy="23" r="6" fill="#F59E0B"/>
+  <circle cx="68" cy="23" r="6" fill="#10B981"/>
+
+  <text x="100" y="28" class="dash-text" font-size="13" font-weight="700" fill="#0F172A">BlueMesh Command Center</text>
+  <text x="300" y="28" class="mono-text" font-size="11" font-weight="700" fill="#64748B">MESH STATUS: ONLINE (16/16 NODES)</text>
+  
+  <!-- Header Live Pill -->
+  <g transform="translate(970, 12)">
+    <rect width="105" height="22" rx="11" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1"/>
+    <circle cx="14" cy="11" r="4.5" fill="#059669"/>
+    <text x="26" y="15" class="mono-text" font-size="10" font-weight="800" fill="#047857">LIVE STREAM</text>
+  </g>
+
+  <!-- Left Sidebar -->
+  <g transform="translate(18, 60)">
+    <rect width="210" height="500" rx="10" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+    
+    <!-- Sidebar Items -->
+    <!-- Item 1: Active -->
+    <rect x="10" y="16" width="190" height="38" rx="8" fill="#E0F2FE" stroke="#BAE6FD" stroke-width="1"/>
+    <text x="32" y="40" class="dash-text" font-size="13" font-weight="700" fill="#0369A1">📊 Campus Heatmap</text>
+
+    <!-- Item 2 -->
+    <g transform="translate(10, 62)">
+      <rect width="190" height="36" rx="8" fill="transparent"/>
+      <text x="22" y="23" class="dash-text" font-size="13" font-weight="600" fill="#475569">👥 Student Registry</text>
+    </g>
+
+    <!-- Item 3 -->
+    <g transform="translate(10, 106)">
+      <rect width="190" height="36" rx="8" fill="transparent"/>
+      <text x="22" y="23" class="dash-text" font-size="13" font-weight="600" fill="#475569">👨‍🏫 Staff Tracking</text>
+    </g>
+
+    <!-- Item 4 -->
+    <g transform="translate(10, 150)">
+      <rect width="190" height="36" rx="8" fill="transparent"/>
+      <text x="22" y="23" class="dash-text" font-size="13" font-weight="600" fill="#DC2626">🚨 Fraud Alerts (2)</text>
+    </g>
+
+    <!-- Item 5 -->
+    <g transform="translate(10, 194)">
+      <rect width="190" height="36" rx="8" fill="transparent"/>
+      <text x="22" y="23" class="dash-text" font-size="13" font-weight="600" fill="#475569">🌐 Mesh Health &amp; RSSI</text>
+    </g>
+
+    <!-- Item 6 -->
+    <g transform="translate(10, 238)">
+      <rect width="190" height="36" rx="8" fill="transparent"/>
+      <text x="22" y="23" class="dash-text" font-size="13" font-weight="600" fill="#475569">📜 Audit Ledger (SHA)</text>
+    </g>
+
+    <!-- Bottom Node Specs Box -->
+    <g transform="translate(12, 350)">
+      <rect width="186" height="136" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+      <text x="14" y="24" class="dash-text" font-size="11.5" font-weight="800" fill="#0284C7">GATEWAY STATS</text>
+      <text x="14" y="46" class="mono-text" font-size="10.5" fill="#475569">Mesh Sync: &lt;180ms</text>
+      <text x="14" y="66" class="mono-text" font-size="10.5" fill="#475569">Uplink: LTE (4G)</text>
+      <text x="14" y="86" class="mono-text" font-size="10.5" fill="#475569">Battery Safe: 100%</text>
+      <text x="14" y="106" class="mono-text" font-size="10.5" font-weight="700" fill="#059669">DPDP Compliant: YES</text>
+    </g>
+  </g>
+
+  <!-- Top Metrics KPI Cards -->
+  <g transform="translate(242, 60)">
+    <!-- KPI 1 -->
+    <g transform="translate(0, 0)" filter="url(#dashShadow)">
+      <rect width="195" height="82" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
+      <text x="16" y="24" class="dash-text" font-size="12" font-weight="600" fill="#64748B">Verified Present</text>
+      <text x="16" y="56" class="dash-text" font-size="26" font-weight="800" fill="#0F172A">842 <tspan font-size="14" font-weight="500" fill="#94A3B8">/ 910</tspan></text>
+      <text x="135" y="52" class="mono-text" font-size="12" font-weight="800" fill="#059669">92.5%</text>
+    </g>
+
+    <!-- KPI 2 -->
+    <g transform="translate(210, 0)" filter="url(#dashShadow)">
+      <rect width="195" height="82" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
+      <text x="16" y="24" class="dash-text" font-size="12" font-weight="600" fill="#64748B">Active Staff On-Site</text>
+      <text x="16" y="56" class="dash-text" font-size="26" font-weight="800" fill="#0284C7">48 <tspan font-size="14" font-weight="500" fill="#94A3B8">/ 50</tspan></text>
+      <text x="142" y="52" class="mono-text" font-size="12" font-weight="800" fill="#0284C7">96.0%</text>
+    </g>
+
+    <!-- KPI 3 -->
+    <g transform="translate(420, 0)" filter="url(#dashShadow)">
+      <rect width="195" height="82" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
+      <text x="16" y="24" class="dash-text" font-size="12" font-weight="600" fill="#64748B">Mesh Nodes Active</text>
+      <text x="16" y="56" class="dash-text" font-size="26" font-weight="800" fill="#059669">16 <tspan font-size="14" font-weight="500" fill="#94A3B8">/ 16</tspan></text>
+      <text x="145" y="52" class="mono-text" font-size="12" font-weight="800" fill="#059669">100%</text>
+    </g>
+
+    <!-- KPI 4 -->
+    <g transform="translate(630, 0)" filter="url(#dashShadow)">
+      <rect width="205" height="82" rx="10" fill="#FEF2F2" stroke="#FECACA"/>
+      <text x="16" y="24" class="dash-text" font-size="12" font-weight="700" fill="#DC2626">Fraud Alerts</text>
+      <text x="16" y="56" class="dash-text" font-size="26" font-weight="800" fill="#DC2626">1 <tspan font-size="13" font-weight="600" fill="#EF4444">Action Req.</tspan></text>
+      <circle cx="180" cy="24" r="5" fill="#DC2626"/>
+    </g>
+  </g>
+
+  <!-- Middle Left: Live Classroom Heatmap Grid -->
+  <g transform="translate(242, 155)" filter="url(#dashShadow)">
+    <rect width="520" height="230" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <text x="16" y="28" class="dash-text" font-size="14" font-weight="800" fill="#0F172A">Campus Real-Time Presence Heatmap</text>
+    <text x="400" y="28" class="mono-text" font-size="11" font-weight="600" fill="#64748B">REFRESH: 5s</text>
+
+    <!-- Room Grid 1 -->
+    <g transform="translate(16, 45)">
+      <rect width="155" height="75" rx="8" fill="#ECFDF5" stroke="#A7F3D0"/>
+      <text x="12" y="22" class="dash-text" font-size="13" font-weight="700" fill="#047857">Classroom 101-A</text>
+      <text x="12" y="42" class="mono-text" font-size="11" fill="#065F46">38/40 Students</text>
+      <text x="12" y="60" class="dash-text" font-size="11" font-weight="600" fill="#059669">Teacher: Present ✓</text>
+    </g>
+
+    <!-- Room Grid 2 -->
+    <g transform="translate(182, 45)">
+      <rect width="155" height="75" rx="8" fill="#ECFDF5" stroke="#A7F3D0"/>
+      <text x="12" y="22" class="dash-text" font-size="13" font-weight="700" fill="#047857">Classroom 102-B</text>
+      <text x="12" y="42" class="mono-text" font-size="11" fill="#065F46">41/42 Students</text>
+      <text x="12" y="60" class="dash-text" font-size="11" font-weight="600" fill="#059669">Teacher: Present ✓</text>
+    </g>
+
+    <!-- Room Grid 3 -->
+    <g transform="translate(348, 45)">
+      <rect width="155" height="75" rx="8" fill="#ECFDF5" stroke="#A7F3D0"/>
+      <text x="12" y="22" class="dash-text" font-size="13" font-weight="700" fill="#047857">Physics Lab</text>
+      <text x="12" y="42" class="mono-text" font-size="11" fill="#065F46">30/30 Students</text>
+      <text x="12" y="60" class="dash-text" font-size="11" font-weight="600" fill="#059669">Teacher: Present ✓</text>
+    </g>
+
+    <!-- Room Grid 4 -->
+    <g transform="translate(16, 132)">
+      <rect width="155" height="82" rx="8" fill="#FEF2F2" stroke="#FECACA"/>
+      <text x="12" y="22" class="dash-text" font-size="13" font-weight="700" fill="#DC2626">Staff Room (R-204)</text>
+      <text x="12" y="42" class="mono-text" font-size="11" font-weight="700" fill="#B91C1C">Anomaly Alert ⚠️</text>
+      <text x="12" y="60" class="dash-text" font-size="10.5" fill="#991B1B">Tchr #8129 missing</text>
+    </g>
+
+    <!-- Room Grid 5 -->
+    <g transform="translate(182, 132)">
+      <rect width="155" height="82" rx="8" fill="#ECFDF5" stroke="#A7F3D0"/>
+      <text x="12" y="22" class="dash-text" font-size="13" font-weight="700" fill="#047857">Computer Lab</text>
+      <text x="12" y="42" class="mono-text" font-size="11" fill="#065F46">44/45 Students</text>
+      <text x="12" y="60" class="dash-text" font-size="11" font-weight="600" fill="#059669">Teacher: Present ✓</text>
+    </g>
+
+    <!-- Room Grid 6 -->
+    <g transform="translate(348, 132)">
+      <rect width="155" height="82" rx="8" fill="#F0F9FF" stroke="#BAE6FD"/>
+      <text x="12" y="22" class="dash-text" font-size="13" font-weight="700" fill="#0369A1">Library / Study</text>
+      <text x="12" y="42" class="mono-text" font-size="11" fill="#0284C7">22 Active Passes</text>
+      <text x="12" y="60" class="dash-text" font-size="11" fill="#0369A1">BLE Mesh Relay OK</text>
+    </g>
+  </g>
+
+  <!-- Middle Right: Active Fraud Alert Card -->
+  <g transform="translate(774, 155)" filter="url(#dashShadow)">
+    <rect width="303" height="230" rx="10" fill="url(#lightAlertGrad)" stroke="#FECACA" stroke-width="1.5"/>
+    <text x="16" y="28" class="dash-text" font-size="14" font-weight="800" fill="#DC2626">🚨 Active Fraud Detection Alert</text>
+    <text x="16" y="46" class="mono-text" font-size="10.5" font-weight="700" fill="#B91C1C">RULE: #FRD-04 (MARK &amp; LEAVE)</text>
+
+    <rect x="14" y="58" width="275" height="110" rx="6" fill="#FFFFFF" stroke="#FECACA"/>
+    <text x="24" y="80" class="dash-text" font-size="11.5" font-weight="800" fill="#991B1B">Staff ID: #STF-8129 (Maths Dept)</text>
+    <text x="24" y="98" class="dash-text" font-size="11" fill="#334155">Check-in: 08:30 AM (Fingerprint ✓)</text>
+    <text x="24" y="116" class="dash-text" font-size="11" fill="#334155">Last Beacon: 08:44 AM (Gate Node)</text>
+    <text x="24" y="136" class="mono-text" font-size="10.5" font-weight="700" fill="#DC2626">Status: Left Campus early (3.2h)</text>
+    <text x="24" y="154" class="mono-text" font-size="10" fill="#991B1B">Penalty Flag: Auto Deduct Attendance</text>
+
+    <g transform="translate(14, 180)">
+      <rect width="130" height="34" rx="6" fill="#DC2626"/>
+      <text x="65" y="22" text-anchor="middle" class="dash-text" font-size="11" font-weight="700" fill="#FFFFFF">Notify Inspector</text>
+    </g>
+    <g transform="translate(152, 180)">
+      <rect width="137" height="34" rx="6" fill="#FFFFFF" stroke="#FECACA"/>
+      <text x="68" y="22" text-anchor="middle" class="dash-text" font-size="11" font-weight="700" fill="#DC2626">View Audit Hash</text>
+    </g>
+  </g>
+
+  <!-- Bottom: Real-Time Verification Event Stream / Audit Logs -->
+  <g transform="translate(242, 396)" filter="url(#dashShadow)">
+    <rect width="835" height="164" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <text x="16" y="24" class="dash-text" font-size="13" font-weight="800" fill="#0F172A">Live Proof-of-Presence Stream &amp; Cryptographic Audit Ledger</text>
+    <text x="690" y="24" class="mono-text" font-size="10.5" font-weight="700" fill="#0284C7">SHA-256 LEDGER SYNCED</text>
+
+    <!-- Table Header -->
+    <rect x="14" y="36" width="807" height="24" rx="4" fill="#F1F5F9"/>
+    <text x="24" y="52" class="mono-text" font-size="10" font-weight="800" fill="#475569">TIMESTAMP</text>
+    <text x="130" y="52" class="mono-text" font-size="10" font-weight="800" fill="#475569">USER ID / ROLE</text>
+    <text x="270" y="52" class="mono-text" font-size="10" font-weight="800" fill="#475569">LOCATION NODE</text>
+    <text x="430" y="52" class="mono-text" font-size="10" font-weight="800" fill="#475569">PROOF / TOKEN</text>
+    <text x="620" y="52" class="mono-text" font-size="10" font-weight="800" fill="#475569">HASH INTEGRITY</text>
+    <text x="750" y="52" class="mono-text" font-size="10" font-weight="800" fill="#475569">STATUS</text>
+
+    <!-- Row 1 -->
+    <g transform="translate(14, 66)">
+      <text x="10" y="16" class="mono-text" font-size="10" fill="#334155">09:14:02.110</text>
+      <text x="116" y="16" class="mono-text" font-size="10" font-weight="700" fill="#0284C7">#STU-2026-081 (Student)</text>
+      <text x="256" y="16" class="dash-text" font-size="10.5" fill="#334155">Room 101-A (ESP-04)</text>
+      <text x="416" y="16" class="mono-text" font-size="10" fill="#64748B">HMAC_8f3a9...b4c</text>
+      <text x="606" y="16" class="mono-text" font-size="10" font-weight="700" fill="#059669">0x9a31...fe02 ✓</text>
+      <text x="736" y="16" class="mono-text" font-size="10" font-weight="800" fill="#059669">VERIFIED</text>
+    </g>
+
+    <!-- Row 2 -->
+    <g transform="translate(14, 94)">
+      <text x="10" y="16" class="mono-text" font-size="10" fill="#334155">09:14:01.890</text>
+      <text x="116" y="16" class="mono-text" font-size="10" font-weight="700" fill="#0284C7">#STU-2026-104 (Student)</text>
+      <text x="256" y="16" class="dash-text" font-size="10.5" fill="#334155">Computer Lab (ESP-09)</text>
+      <text x="416" y="16" class="mono-text" font-size="10" fill="#64748B">HMAC_71dc0...1a8</text>
+      <text x="606" y="16" class="mono-text" font-size="10" font-weight="700" fill="#059669">0x3b18...cd77 ✓</text>
+      <text x="736" y="16" class="mono-text" font-size="10" font-weight="800" fill="#059669">VERIFIED</text>
+    </g>
+
+    <!-- Row 3 -->
+    <g transform="translate(14, 122)">
+      <text x="10" y="16" class="mono-text" font-size="10" fill="#334155">09:13:58.420</text>
+      <text x="116" y="16" class="mono-text" font-size="10" font-weight="700" fill="#DC2626">#STF-8129 (Staff)</text>
+      <text x="256" y="16" class="dash-text" font-size="10.5" fill="#991B1B">Exit Gate (ESP-01)</text>
+      <text x="416" y="16" class="mono-text" font-size="10" fill="#DC2626">NONCE_TIMEOUT</text>
+      <text x="606" y="16" class="mono-text" font-size="10" font-weight="700" fill="#DC2626">FLAGGED_HASH !</text>
+      <text x="736" y="16" class="mono-text" font-size="10" font-weight="800" fill="#DC2626">FRAUD_FLAG</text>
+    </g>
+  </g>
+
+</svg>

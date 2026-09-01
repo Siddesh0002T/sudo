@@ -1,0 +1,286 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 620" width="100%" height="100%">
+  <defs>
+    <!-- Light Canvas Background -->
+    <linearGradient id="lightCanvasBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC" />
+      <stop offset="100%" stop-color="#F1F5F9" />
+    </linearGradient>
+
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.06" />
+    </filter>
+  </defs>
+
+  <style>
+    .header-text { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 26px; font-weight: 800; fill: #0F172A; }
+    .subheader { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; fill: #475569; font-weight: 500; }
+    .col-title { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 15px; font-weight: 800; }
+    .col-sub { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.5px; }
+    .item-title { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; font-weight: 700; fill: #1E293B; }
+    .item-desc { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 11.5px; fill: #475569; }
+    .chip { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; font-weight: 700; }
+  </style>
+
+  <!-- Background -->
+  <rect width="1100" height="620" rx="16" fill="url(#lightCanvasBg)" stroke="#E2E8F0" stroke-width="1.5"/>
+
+  <!-- Top Title Bar -->
+  <g transform="translate(40, 42)">
+    <circle cx="12" cy="12" r="10" fill="#E0F2FE"/>
+    <circle cx="12" cy="12" r="5" fill="#0284C7"/>
+    <text x="32" y="19" class="header-text">BlueMesh End-to-End System Architecture</text>
+    <text x="32" y="40" class="subheader">From On-Wrist Biometric Verification to Cloud-Native Real-Time Fraud Analytics</text>
+  </g>
+
+  <!-- Flow Connecting Dashed Line -->
+  <path d="M225 330 H900" stroke="#CBD5E1" stroke-dasharray="6 6" stroke-width="2"/>
+  
+  <!-- Connecting Arrows -->
+  <g stroke="#0284C7" stroke-width="2" fill="none">
+    <path d="M225 330 L250 330" />
+    <path d="M435 330 L460 330" />
+    <path d="M645 330 L670 330" />
+    <path d="M855 330 L880 330" />
+  </g>
+
+  <!-- ==================== COLUMN 1: WEARABLE BAND ==================== -->
+  <g transform="translate(40, 110)" filter="url(#cardShadow)">
+    <rect width="190" height="460" rx="12" fill="#FFFFFF" stroke="#BAE6FD" stroke-width="1.5"/>
+    <rect width="190" height="44" rx="12" fill="#E0F2FE"/>
+    <path d="M0 44 H190" stroke="#BAE6FD" stroke-width="1"/>
+    
+    <text x="16" y="24" class="col-title" fill="#0369A1">1. Wearable Band</text>
+    <text x="16" y="38" class="col-sub" fill="#0284C7">ON-DEVICE BIOMETRICS</text>
+
+    <!-- Component 1 -->
+    <g transform="translate(12, 58)">
+      <rect width="166" height="78" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="12" y="22" class="item-title">Capacitive Sensor</text>
+      <text x="12" y="38" class="item-desc">• Instant 1:1 local match</text>
+      <text x="12" y="52" class="item-desc">• Zero raw image export</text>
+      <text x="12" y="66" class="item-desc">• DPDP 2023 compliant</text>
+      <circle cx="148" cy="20" r="4.5" fill="#0284C7"/>
+    </g>
+
+    <!-- Component 2 -->
+    <g transform="translate(12, 146)">
+      <rect width="166" height="88" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="12" y="20" class="item-title">ESP32-C3 MCU</text>
+      <text x="12" y="36" class="item-desc">• Cryptographic nonces</text>
+      <text x="12" y="50" class="item-desc">• Rolling TOTP / HMAC</text>
+      <text x="12" y="64" class="item-desc">• Prevents replay attacks</text>
+      <text x="12" y="78" class="item-desc">• Deep sleep (30+ day bat)</text>
+      <circle cx="148" cy="18" r="4.5" fill="#0284C7"/>
+    </g>
+
+    <!-- Component 3 -->
+    <g transform="translate(12, 244)">
+      <rect width="166" height="80" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="12" y="22" class="item-title">Broadcaster</text>
+      <text x="12" y="38" class="item-desc">• ESP-NOW / BLE Beacon</text>
+      <text x="12" y="52" class="item-desc">• Heartbeat every 60s</text>
+      <text x="12" y="66" class="item-desc">• Proof-of-Presence payload</text>
+      <circle cx="148" cy="20" r="4.5" fill="#059669"/>
+    </g>
+
+    <!-- Status Chip -->
+    <g transform="translate(12, 400)">
+      <rect width="166" height="42" rx="6" fill="#F0F9FF" stroke="#BAE6FD"/>
+      <text x="83" y="18" text-anchor="middle" class="chip" fill="#0369A1">ACTIVATES ONLY UPON</text>
+      <text x="83" y="32" text-anchor="middle" class="chip" fill="#0369A1">VALID BIOMETRIC PROOF</text>
+    </g>
+  </g>
+
+  <!-- ==================== COLUMN 2: MESH NETWORK ==================== -->
+  <g transform="translate(250, 110)" filter="url(#cardShadow)">
+    <rect width="190" height="460" rx="12" fill="#FFFFFF" stroke="#DDD6FE" stroke-width="1.5"/>
+    <rect width="190" height="44" rx="12" fill="#F5F3FF"/>
+    <path d="M0 44 H190" stroke="#DDD6FE" stroke-width="1"/>
+
+    <text x="16" y="24" class="col-title" fill="#6D28D9">2. Classroom Nodes</text>
+    <text x="16" y="38" class="col-sub" fill="#7C3AED">ESP-NOW MULTI-HOP MESH</text>
+
+    <!-- Component 1 -->
+    <g transform="translate(12, 58)">
+      <rect width="166" height="74" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="12" y="22" class="item-title">Room Listener Node</text>
+      <text x="12" y="38" class="item-desc">• Wall-plugged ESP32</text>
+      <text x="12" y="52" class="item-desc">• Sniffs nearby active bands</text>
+      <text x="12" y="66" class="item-desc">• Attaches Room ID + RSSI</text>
+      <circle cx="148" cy="20" r="4.5" fill="#7C3AED"/>
+    </g>
+
+    <!-- Component 2 -->
+    <g transform="translate(12, 142)">
+      <rect width="166" height="88" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="12" y="20" class="item-title">Dynamic Relay Engine</text>
+      <text x="12" y="36" class="item-desc">• Hop-to-hop propagation</text>
+      <text x="12" y="50" class="item-desc">• Auto route discovery</text>
+      <text x="12" y="64" class="item-desc">• Self-healing if node fails</text>
+      <text x="12" y="78" class="item-desc">• Zero Wi-Fi wiring needed</text>
+      <circle cx="148" cy="18" r="4.5" fill="#7C3AED"/>
+    </g>
+
+    <!-- Component 3 -->
+    <g transform="translate(12, 240)">
+      <rect width="166" height="74" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="12" y="22" class="item-title">Offline Packet Buffer</text>
+      <text x="12" y="38" class="item-desc">• Local ring buffer in flash</text>
+      <text x="12" y="52" class="item-desc">• Prevents data loss</text>
+      <text x="12" y="66" class="item-desc">• Automatic backpressure</text>
+      <circle cx="148" cy="20" r="4.5" fill="#059669"/>
+    </g>
+
+    <!-- Status Chip -->
+    <g transform="translate(12, 400)">
+      <rect width="166" height="42" rx="6" fill="#FAF5FF" stroke="#DDD6FE"/>
+      <text x="83" y="18" text-anchor="middle" class="chip" fill="#6D28D9">COVERS ENTIRE CAMPUS</text>
+      <text x="83" y="32" text-anchor="middle" class="chip" fill="#6D28D9">WITH ZERO IN-ROOM WI-FI</text>
+    </g>
+  </g>
+
+  <!-- ==================== COLUMN 3: EDGE GATEWAY ==================== -->
+  <g transform="translate(460, 110)" filter="url(#cardShadow)">
+    <rect width="190" height="460" rx="12" fill="#FFFFFF" stroke="#A7F3D0" stroke-width="1.5"/>
+    <rect width="190" height="44" rx="12" fill="#ECFDF5"/>
+    <path d="M0 44 H190" stroke="#A7F3D0" stroke-width="1"/>
+
+    <text x="16" y="24" class="col-title" fill="#047857">3. Edge Gateway</text>
+    <text x="16" y="38" class="col-sub" fill="#059669">INTERNET BRIDGE</text>
+
+    <!-- Component 1 -->
+    <g transform="translate(12, 58)">
+      <rect width="166" height="74" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="12" y="22" class="item-title">Gateway Hub (ESP32/Pi)</text>
+      <text x="12" y="38" class="item-desc">• Root sink of the mesh</text>
+      <text x="12" y="52" class="item-desc">• De-duplicates packets</text>
+      <text x="12" y="66" class="item-desc">• Time-syncs via NTP</text>
+      <circle cx="148" cy="20" r="4.5" fill="#059669"/>
+    </g>
+
+    <!-- Component 2 -->
+    <g transform="translate(12, 142)">
+      <rect width="166" height="88" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="12" y="20" class="item-title">Secure Cloud Uplink</text>
+      <text x="12" y="36" class="item-desc">• Single 4G / Wi-Fi point</text>
+      <text x="12" y="50" class="item-desc">• TLS 1.3 encrypted payload</text>
+      <text x="12" y="64" class="item-desc">• MQTT / REST batching</text>
+      <text x="12" y="78" class="item-desc">• Stores ~48h offline logs</text>
+      <circle cx="148" cy="18" r="4.5" fill="#059669"/>
+    </g>
+
+    <!-- Component 3 -->
+    <g transform="translate(12, 240)">
+      <rect width="166" height="74" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="12" y="22" class="item-title">Health Monitor</text>
+      <text x="12" y="38" class="item-desc">• Pings all mesh nodes</text>
+      <text x="12" y="52" class="item-desc">• Node battery/drop alerts</text>
+      <text x="12" y="66" class="item-desc">• Over-The-Air (OTA) updates</text>
+      <circle cx="148" cy="20" r="4.5" fill="#D97706"/>
+    </g>
+
+    <!-- Status Chip -->
+    <g transform="translate(12, 400)">
+      <rect width="166" height="42" rx="6" fill="#F0FDF4" stroke="#A7F3D0"/>
+      <text x="83" y="18" text-anchor="middle" class="chip" fill="#047857">ONLY 1 INTERNET POINT</text>
+      <text x="83" y="32" text-anchor="middle" class="chip" fill="#047857">FOR ENTIRE SCHOOL</text>
+    </g>
+  </g>
+
+  <!-- ==================== COLUMN 4: BACKEND & FRAUD DETECTION ==================== -->
+  <g transform="translate(670, 110)" filter="url(#cardShadow)">
+    <rect width="190" height="460" rx="12" fill="#FFFFFF" stroke="#FDE68A" stroke-width="1.5"/>
+    <rect width="190" height="44" rx="12" fill="#FFFBEB"/>
+    <path d="M0 44 H190" stroke="#FDE68A" stroke-width="1"/>
+
+    <text x="16" y="24" class="col-title" fill="#B45309">4. Backend &amp; Ledger</text>
+    <text x="16" y="38" class="col-sub" fill="#D97706">NODE.JS + IMMUTABLE DB</text>
+
+    <!-- Component 1 -->
+    <g transform="translate(12, 58)">
+      <rect width="166" height="74" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="12" y="22" class="item-title">Presence Engine</text>
+      <text x="12" y="38" class="item-desc">• Continuous last-seen state</text>
+      <text x="12" y="52" class="item-desc">• Dwell-time calculation</text>
+      <text x="12" y="66" class="item-desc">• Real-time room heatmaps</text>
+      <circle cx="148" cy="20" r="4.5" fill="#D97706"/>
+    </g>
+
+    <!-- Component 2 -->
+    <g transform="translate(12, 142)">
+      <rect width="166" height="88" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="12" y="20" class="item-title">Fraud AI / Rules</text>
+      <text x="12" y="36" class="item-desc">• Mark-and-Leave detector</text>
+      <text x="12" y="50" class="item-desc">• Ghost student anomalies</text>
+      <text x="12" y="64" class="item-desc">• Band transfer detection</text>
+      <text x="12" y="78" class="item-desc">• Automated penalty flags</text>
+      <circle cx="148" cy="18" r="4.5" fill="#DC2626"/>
+    </g>
+
+    <!-- Component 3 -->
+    <g transform="translate(12, 240)">
+      <rect width="166" height="74" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="12" y="22" class="item-title">Immutable Audit Log</text>
+      <text x="12" y="38" class="item-desc">• Cryptographic SHA-256 chain</text>
+      <text x="12" y="52" class="item-desc">• Admin edits logged publicly</text>
+      <text x="12" y="66" class="item-desc">• Tamper-evident records</text>
+      <circle cx="148" cy="20" r="4.5" fill="#0284C7"/>
+    </g>
+
+    <!-- Status Chip -->
+    <g transform="translate(12, 400)">
+      <rect width="166" height="42" rx="6" fill="#FFFDF0" stroke="#FDE68A"/>
+      <text x="83" y="18" text-anchor="middle" class="chip" fill="#B45309">TAMPER-PROOF AUDIT</text>
+      <text x="83" y="32" text-anchor="middle" class="chip" fill="#B45309">ZERO QUIET MODIFICATIONS</text>
+    </g>
+  </g>
+
+  <!-- ==================== COLUMN 5: APPS & DASHBOARD ==================== -->
+  <g transform="translate(880, 110)" filter="url(#cardShadow)">
+    <rect width="180" height="460" rx="12" fill="#FFFFFF" stroke="#FECDD3" stroke-width="1.5"/>
+    <rect width="180" height="44" rx="12" fill="#FFF1F2"/>
+    <path d="M0 44 H180" stroke="#FECDD3" stroke-width="1"/>
+
+    <text x="16" y="24" class="col-title" fill="#BE123C">5. Apps &amp; Portal</text>
+    <text x="16" y="38" class="col-sub" fill="#E11D48">REACT + FLUTTER</text>
+
+    <!-- Component 1 -->
+    <g transform="translate(12, 58)">
+      <rect width="156" height="74" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="10" y="22" class="item-title">React Web Portal</text>
+      <text x="10" y="38" class="item-desc">• Live floor-plan visualizer</text>
+      <text x="10" y="52" class="item-desc">• Real-time fraud banners</text>
+      <text x="10" y="66" class="item-desc">• Role-based access control</text>
+      <circle cx="140" cy="20" r="4.5" fill="#E11D48"/>
+    </g>
+
+    <!-- Component 2 -->
+    <g transform="translate(12, 142)">
+      <rect width="156" height="88" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="10" y="20" class="item-title">Flutter Mobile App</text>
+      <text x="10" y="36" class="item-desc">• Field inspector spot check</text>
+      <text x="10" y="50" class="item-desc">• Teacher roll-call sync</text>
+      <text x="10" y="64" class="item-desc">• Bluetooth diagnostics</text>
+      <text x="10" y="78" class="item-desc">• Offline mode support</text>
+      <circle cx="140" cy="18" r="4.5" fill="#0284C7"/>
+    </g>
+
+    <!-- Component 3 -->
+    <g transform="translate(12, 240)">
+      <rect width="156" height="74" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="10" y="22" class="item-title">Govt / District API</text>
+      <text x="10" y="38" class="item-desc">• AEBAS compliance export</text>
+      <text x="10" y="52" class="item-desc">• Direct DBT scholarship link</text>
+      <text x="10" y="66" class="item-desc">• State analytics dashboard</text>
+      <circle cx="140" cy="20" r="4.5" fill="#059669"/>
+    </g>
+
+    <!-- Status Chip -->
+    <g transform="translate(12, 400)">
+      <rect width="156" height="42" rx="6" fill="#FFF1F2" stroke="#FECDD3"/>
+      <text x="78" y="18" text-anchor="middle" class="chip" fill="#BE123C">DIRECT SCHOLARSHIP</text>
+      <text x="78" y="32" text-anchor="middle" class="chip" fill="#BE123C">&amp; WELFARE INTEGRATION</text>
+    </g>
+  </g>
+
+</svg>

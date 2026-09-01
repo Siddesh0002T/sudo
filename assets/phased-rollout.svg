@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 360" width="100%" height="100%">
+  <defs>
+    <!-- Light Background Gradient -->
+    <linearGradient id="lightPhaseBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC" />
+      <stop offset="100%" stop-color="#F1F5F9" />
+    </linearGradient>
+
+    <linearGradient id="p1LightGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E0F2FE" />
+      <stop offset="100%" stop-color="#BAE6FD" />
+    </linearGradient>
+
+    <linearGradient id="p2LightGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5F3FF" />
+      <stop offset="100%" stop-color="#DDD6FE" />
+    </linearGradient>
+
+    <linearGradient id="p3LightGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ECFDF5" />
+      <stop offset="100%" stop-color="#A7F3D0" />
+    </linearGradient>
+
+    <filter id="phaseShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <style>
+    .phase-title { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 22px; font-weight: 800; fill: #0F172A; }
+    .phase-sub { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13.5px; fill: #475569; font-weight: 500; }
+    .card-h { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 15px; font-weight: 800; }
+    .badge-p { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 800; }
+    .p-body { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 12px; fill: #334155; }
+    .roi-text { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; font-weight: 700; }
+  </style>
+
+  <!-- Background -->
+  <rect width="1100" height="360" rx="16" fill="url(#lightPhaseBg)" stroke="#E2E8F0" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <g transform="translate(40, 34)">
+    <text x="0" y="0" class="phase-title">Strategic 3-Stage Phased Implementation Roadmap</text>
+    <text x="0" y="20" class="phase-sub">Pragmatic hardware adoption scaling from high-impact staff verification to campus-wide scholarship fraud mitigation</text>
+  </g>
+
+  <!-- ==================== PHASE 1 CARD ==================== -->
+  <g transform="translate(40, 80)" filter="url(#phaseShadow)">
+    <rect width="320" height="245" rx="12" fill="#FFFFFF" stroke="#BAE6FD" stroke-width="1.5"/>
+    
+    <!-- Top Pill -->
+    <rect width="320" height="42" rx="12" fill="url(#p1LightGrad)"/>
+    <path d="M0 42 H320" stroke="#BAE6FD" stroke-width="1"/>
+    <text x="16" y="26" class="card-h" fill="#0369A1">PHASE 1: Staff &amp; Faculty</text>
+    <text x="304" y="26" text-anchor="end" class="badge-p" fill="#0284C7">IMMEDIATE ROI</text>
+
+    <g transform="translate(16, 58)">
+      <text x="0" y="16" class="p-body" font-weight="800" fill="#0284C7">🎯 Target: Teachers, Principals, Staff</text>
+      <text x="0" y="36" class="p-body">• High-fidelity biometric wristband</text>
+      <text x="0" y="54" class="p-body">• Stops morning check-in &amp; leave fraud</text>
+      <text x="0" y="72" class="p-body">• Continuous period-by-period presence</text>
+      <text x="0" y="90" class="p-body">• Solves DoPT AEBAS compliance</text>
+
+      <rect y="112" width="288" height="50" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="12" y="132" class="roi-text" fill="#0369A1">Hardware: ESP32-C3 + Optical/Capacitive</text>
+      <text x="12" y="148" class="roi-text" fill="#059669">Impact: 100% staff accountability</text>
+    </g>
+  </g>
+
+  <!-- ==================== PHASE 2 CARD ==================== -->
+  <g transform="translate(390, 80)" filter="url(#phaseShadow)">
+    <rect width="320" height="245" rx="12" fill="#FFFFFF" stroke="#DDD6FE" stroke-width="1.5"/>
+    
+    <rect width="320" height="42" rx="12" fill="url(#p2LightGrad)"/>
+    <path d="M0 42 H320" stroke="#DDD6FE" stroke-width="1"/>
+    <text x="16" y="26" class="card-h" fill="#6D28D9">PHASE 2: Primary Students</text>
+    <text x="304" y="26" text-anchor="end" class="badge-p" fill="#7C3AED">LOW COST SCALE</text>
+
+    <g transform="translate(16, 58)">
+      <text x="0" y="16" class="p-body" font-weight="800" fill="#7C3AED">🎯 Target: Class 1 to 8 (Young Minors)</text>
+      <text x="0" y="36" class="p-body">• Zero biometric friction for small fingers</text>
+      <text x="0" y="54" class="p-body">• Lightweight BLE / NFC proximity tags</text>
+      <text x="0" y="72" class="p-body">• Ultra-affordable (sub-₹120 per student)</text>
+      <text x="0" y="90" class="p-body">• Classroom teacher validates roster</text>
+
+      <rect y="112" width="288" height="50" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="12" y="132" class="roi-text" fill="#6D28D9">Hardware: BLE Proximity Beacon Tag</text>
+      <text x="12" y="148" class="roi-text" fill="#059669">Impact: Budget-friendly mass roll-out</text>
+    </g>
+  </g>
+
+  <!-- ==================== PHASE 3 CARD ==================== -->
+  <g transform="translate(740, 80)" filter="url(#phaseShadow)">
+    <rect width="320" height="245" rx="12" fill="#FFFFFF" stroke="#A7F3D0" stroke-width="1.5"/>
+    
+    <rect width="320" height="42" rx="12" fill="url(#p3LightGrad)"/>
+    <path d="M0 42 H320" stroke="#A7F3D0" stroke-width="1"/>
+    <text x="16" y="26" class="card-h" fill="#047857">PHASE 3: Full Scholarship Link</text>
+    <text x="304" y="26" text-anchor="end" class="badge-p" fill="#059669">ANTI-FRAUD APEX</text>
+
+    <g transform="translate(16, 58)">
+      <text x="0" y="16" class="p-body" font-weight="800" fill="#047857">🎯 Target: High School, Higher Ed &amp; DBT</text>
+      <text x="0" y="36" class="p-body">• Smart Biometric wristbands for seniors</text>
+      <text x="0" y="54" class="p-body">• Eliminates "Ghost Student" funding</text>
+      <text x="0" y="72" class="p-body">• Direct DBT scholarship automation</text>
+      <text x="0" y="90" class="p-body">• State-level real-time audit ledger</text>
+
+      <rect y="112" width="288" height="50" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="12" y="132" class="roi-text" fill="#047857">Hardware: Full Biometric Mesh Fleet</text>
+      <text x="12" y="148" class="roi-text" fill="#0284C7">Impact: Saves crores in welfare fraud</text>
+    </g>
+  </g>
+</svg>

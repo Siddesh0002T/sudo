@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+  <defs>
+    <!-- Light Gradients -->
+    <linearGradient id="lightBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="50%" stop-color="#F8FAFC" />
+      <stop offset="100%" stop-color="#F0F9FF" />
+    </linearGradient>
+    
+    <linearGradient id="primaryTitleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="50%" stop-color="#2563EB" />
+      <stop offset="100%" stop-color="#4F46E5" />
+    </linearGradient>
+
+    <linearGradient id="badgeLightGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E0F2FE" />
+      <stop offset="100%" stop-color="#EEF2FF" />
+    </linearGradient>
+
+    <filter id="lightShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+
+    <filter id="softGlowLight" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .title { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 52px; letter-spacing: -0.5px; }
+    .subtitle { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 500; font-size: 19px; fill: #334155; }
+    .badge-text { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-weight: 700; font-size: 12px; fill: #0369A1; letter-spacing: 1px; }
+    .tag { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; font-weight: 600; fill: #1E293B; }
+    .mesh-line { stroke: #0284C7; stroke-opacity: 0.35; stroke-dasharray: 4 4; }
+  </style>
+
+  <!-- Background -->
+  <rect width="1200" height="360" rx="16" fill="url(#lightBgGrad)" stroke="#E2E8F0" stroke-width="1.5" />
+
+  <!-- Background Mesh Grid Accent -->
+  <g opacity="0.45">
+    <path d="M0 60 H1200 M0 120 H1200 M0 180 H1200 M0 240 H1200 M0 300 H1200" stroke="#E2E8F0" stroke-width="1"/>
+    <path d="M120 0 V360 M240 0 V360 M360 0 V360 M480 0 V360 M600 0 V360 M720 0 V360 M840 0 V360 M960 0 V360 M1080 0 V360" stroke="#E2E8F0" stroke-width="1"/>
+  </g>
+
+  <!-- Right Decorative Mesh Network Visual Graphic -->
+  <g transform="translate(820, 30)">
+    <!-- Ambient Light Circle Glow -->
+    <circle cx="180" cy="150" r="140" fill="#E0F2FE" opacity="0.6"/>
+    <circle cx="220" cy="110" r="90" fill="#EEF2FF" opacity="0.7"/>
+
+    <!-- Mesh Connectors -->
+    <line x1="80" y1="90" x2="160" y2="50" class="mesh-line" stroke-width="2"/>
+    <line x1="160" y1="50" x2="260" y2="80" class="mesh-line" stroke-width="2"/>
+    <line x1="260" y1="80" x2="310" y2="170" class="mesh-line" stroke-width="2"/>
+    <line x1="80" y1="90" x2="140" y2="180" class="mesh-line" stroke-width="2"/>
+    <line x1="140" y1="180" x2="220" y2="240" class="mesh-line" stroke-width="2"/>
+    <line x1="220" y1="240" x2="310" y2="170" class="mesh-line" stroke-width="2"/>
+    <line x1="160" y1="50" x2="140" y2="180" class="mesh-line" stroke-width="2"/>
+    <line x1="260" y1="80" x2="220" y2="240" class="mesh-line" stroke-width="2"/>
+    <line x1="140" y1="180" x2="260" y2="80" class="mesh-line" stroke-width="1.5"/>
+
+    <!-- Mesh Nodes -->
+    <!-- Node 1: Wearable Band -->
+    <g transform="translate(80,90)" filter="url(#lightShadow)">
+      <circle cx="0" cy="0" r="20" fill="#FFFFFF" stroke="#0284C7" stroke-width="2.5"/>
+      <circle cx="0" cy="0" r="8" fill="#0284C7"/>
+      <text x="0" y="34" text-anchor="middle" fill="#475569" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">Band</text>
+    </g>
+
+    <!-- Node 2: Classroom Node A -->
+    <g transform="translate(160,50)" filter="url(#lightShadow)">
+      <circle cx="0" cy="0" r="16" fill="#FFFFFF" stroke="#4F46E5" stroke-width="2"/>
+      <circle cx="0" cy="0" r="6" fill="#4F46E5"/>
+      <text x="0" y="-22" text-anchor="middle" fill="#475569" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">Node A</text>
+    </g>
+
+    <!-- Node 3: Classroom Node B -->
+    <g transform="translate(260,80)" filter="url(#lightShadow)">
+      <circle cx="0" cy="0" r="16" fill="#FFFFFF" stroke="#4F46E5" stroke-width="2"/>
+      <circle cx="0" cy="0" r="6" fill="#4F46E5"/>
+      <text x="25" y="-12" fill="#475569" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">Node B</text>
+    </g>
+
+    <!-- Node 4: Classroom Node C -->
+    <g transform="translate(140,180)" filter="url(#lightShadow)">
+      <circle cx="0" cy="0" r="16" fill="#FFFFFF" stroke="#4F46E5" stroke-width="2"/>
+      <circle cx="0" cy="0" r="6" fill="#4F46E5"/>
+      <text x="-36" y="5" fill="#475569" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">Node C</text>
+    </g>
+
+    <!-- Node 5: Gateway -->
+    <g transform="translate(220,240)" filter="url(#lightShadow)">
+      <circle cx="0" cy="0" r="24" fill="#FFFFFF" stroke="#059669" stroke-width="3"/>
+      <circle cx="0" cy="0" r="10" fill="#059669"/>
+      <text x="0" y="38" text-anchor="middle" fill="#059669" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="800">GATEWAY</text>
+    </g>
+
+    <!-- Node 6: Cloud Relay -->
+    <g transform="translate(310,170)" filter="url(#lightShadow)">
+      <circle cx="0" cy="0" r="18" fill="#FFFFFF" stroke="#9333EA" stroke-width="2"/>
+      <circle cx="0" cy="0" r="7" fill="#9333EA"/>
+      <text x="0" y="32" text-anchor="middle" fill="#9333EA" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">Cloud</text>
+    </g>
+
+    <!-- Signal Pulses -->
+    <circle cx="80" cy="90" r="30" fill="none" stroke="#0284C7" stroke-width="1.5" opacity="0.4" stroke-dasharray="3 3"/>
+    <circle cx="220" cy="240" r="36" fill="none" stroke="#059669" stroke-width="1.5" opacity="0.3"/>
+  </g>
+
+  <!-- Left Content -->
+  <g transform="translate(60, 50)">
+    <!-- Hackathon & Badge Header -->
+    <g transform="translate(0, 0)" filter="url(#lightShadow)">
+      <rect width="320" height="28" rx="14" fill="url(#badgeLightGrad)" stroke="#BAE6FD" stroke-width="1"/>
+      <circle cx="14" cy="14" r="5" fill="#0284C7"/>
+      <text x="26" y="18" class="badge-text">SIH 2026 // HARDWARE EDITION</text>
+    </g>
+
+    <!-- Project Title -->
+    <g transform="translate(0, 72)">
+      <text x="0" y="0" class="title" fill="url(#primaryTitleGrad)">BLUEMESH</text>
+    </g>
+
+    <!-- Subtitle / Tagline -->
+    <text x="0" y="112" class="subtitle">
+      Zero-Infrastructure Proof-Based Biometric Attendance &amp; Live Fraud Detection
+    </text>
+    <text x="0" y="136" class="subtitle" font-size="15" fill="#64748B" font-weight="400">
+      Decentralized ESP-NOW multi-hop mesh with on-band biometrics &amp; immutable audit ledger.
+    </text>
+
+    <!-- Feature Badges Row -->
+    <g transform="translate(0, 180)">
+      <!-- Badge 1 -->
+      <g transform="translate(0,0)" filter="url(#lightShadow)">
+        <rect width="132" height="34" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+        <circle cx="16" cy="17" r="4.5" fill="#0284C7"/>
+        <text x="28" y="22" class="tag">ESP-NOW Mesh</text>
+      </g>
+
+      <!-- Badge 2 -->
+      <g transform="translate(144,0)" filter="url(#lightShadow)">
+        <rect width="150" height="34" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+        <circle cx="16" cy="17" r="4.5" fill="#7C3AED"/>
+        <text x="28" y="22" class="tag">On-Band Biometrics</text>
+      </g>
+
+      <!-- Badge 3 -->
+      <g transform="translate(306,0)" filter="url(#lightShadow)">
+        <rect width="140" height="34" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+        <circle cx="16" cy="17" r="4.5" fill="#059669"/>
+        <text x="28" y="22" class="tag">Live Anti-Proxy</text>
+      </g>
+
+      <!-- Badge 4 -->
+      <g transform="translate(458,0)" filter="url(#lightShadow)">
+        <rect width="152" height="34" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+        <circle cx="16" cy="17" r="4.5" fill="#D97706"/>
+        <text x="28" y="22" class="tag">Zero In-Room Wi-Fi</text>
+      </g>
+
+      <!-- Badge 5 -->
+      <g transform="translate(622,0)" filter="url(#lightShadow)">
+        <rect width="128" height="34" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+        <circle cx="16" cy="17" r="4.5" fill="#E11D48"/>
+        <text x="28" y="22" class="tag">DPDP Act 2023</text>
+      </g>
+    </g>
+
+    <!-- Bottom Metric Callouts -->
+    <g transform="translate(0, 242)">
+      <text x="0" y="0" font-family="'JetBrains Mono', monospace" font-size="12" fill="#0284C7" font-weight="800">1 INTERNET POINT</text>
+      <text x="145" y="0" font-family="'Segoe UI', sans-serif" font-size="12.5" fill="#475569">• Covers entire campus</text>
+
+      <text x="315" y="0" font-family="'JetBrains Mono', monospace" font-size="12" fill="#059669" font-weight="800">&lt; 250ms LATENCY</text>
+      <text x="445" y="0" font-family="'Segoe UI', sans-serif" font-size="12.5" fill="#475569">• 5-hop mesh propagation</text>
+
+      <text x="620" y="0" font-family="'JetBrains Mono', monospace" font-size="12" fill="#E11D48" font-weight="800">ZERO BIOMETRIC LEAK</text>
+      <text x="785" y="0" font-family="'Segoe UI', sans-serif" font-size="12.5" fill="#475569">• Local template matching</text>
+    </g>
+  </g>
+</svg>

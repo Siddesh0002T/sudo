@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 520" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="lightMeshBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC" />
+      <stop offset="100%" stop-color="#F1F5F9" />
+    </linearGradient>
+
+    <filter id="topoShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <style>
+    .title-main { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 24px; font-weight: 800; fill: #0F172A; }
+    .subtitle-main { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; fill: #475569; font-weight: 500; }
+    .panel-title { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 17px; font-weight: 800; }
+    .node-title { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 800; }
+    .node-sub { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 10px; font-weight: 600; }
+    .status-text { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 12.5px; font-weight: 600; }
+    .badge { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 800; }
+  </style>
+
+  <!-- Background -->
+  <rect width="1100" height="520" rx="16" fill="url(#lightMeshBg)" stroke="#E2E8F0" stroke-width="1.5"/>
+
+  <!-- Title Header -->
+  <g transform="translate(40, 36)">
+    <text x="0" y="0" class="title-main">Network Topology Comparison: Traditional vs. BlueMesh</text>
+    <text x="0" y="22" class="subtitle-main">Why decentralized multi-hop mesh solves the rural &amp; semi-urban school connectivity bottleneck</text>
+  </g>
+
+  <!-- ==================== LEFT PANEL: TRADITIONAL SYSTEM ==================== -->
+  <g transform="translate(40, 80)" filter="url(#topoShadow)">
+    <rect width="490" height="400" rx="12" fill="#FFFFFF" stroke="#FECACA" stroke-width="1.5"/>
+    
+    <!-- Header -->
+    <rect width="490" height="42" rx="12" fill="#FEF2F2"/>
+    <path d="M0 42 H490" stroke="#FECACA" stroke-width="1"/>
+    <text x="20" y="26" class="panel-title" fill="#DC2626">❌ Traditional Point-to-Point Architecture</text>
+    <text x="470" y="26" class="badge" fill="#DC2626" text-anchor="end">HIGH FAILURE RATE</text>
+
+    <!-- Traditional Diagram Visual -->
+    <!-- Wi-Fi Central Router -->
+    <g transform="translate(245, 120)">
+      <circle cx="0" cy="0" r="28" fill="#FEF2F2" stroke="#DC2626" stroke-width="2.5"/>
+      <text x="0" y="4" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#DC2626" font-weight="800">Central Wi-Fi</text>
+      <text x="0" y="44" text-anchor="middle" class="node-sub" fill="#64748B">Single Point of Failure</text>
+    </g>
+
+    <!-- Radial Wires with Failures -->
+    <!-- Room 1 (Success) -->
+    <line x1="220" y1="135" x2="80" y2="230" stroke="#059669" stroke-width="2" stroke-dasharray="4 2"/>
+    <g transform="translate(70, 245)">
+      <rect width="80" height="46" rx="6" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1.5"/>
+      <text x="40" y="20" text-anchor="middle" class="node-title" fill="#047857">Room 101</text>
+      <text x="40" y="34" text-anchor="middle" class="node-sub" fill="#059669">Connected</text>
+    </g>
+
+    <!-- Room 2 (Failed / Dead Zone) -->
+    <line x1="235" y1="145" x2="190" y2="230" stroke="#DC2626" stroke-width="2" stroke-dasharray="3 3"/>
+    <g transform="translate(150, 245)">
+      <rect width="80" height="46" rx="6" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+      <text x="40" y="20" text-anchor="middle" class="node-title" fill="#DC2626">Room 102</text>
+      <text x="40" y="34" text-anchor="middle" class="node-sub" fill="#DC2626">No Signal</text>
+      <line x1="10" y1="10" x2="70" y2="36" stroke="#DC2626" stroke-width="1.5" opacity="0.6"/>
+    </g>
+
+    <!-- Room 3 (Failed Router Cable) -->
+    <line x1="255" y1="145" x2="300" y2="230" stroke="#DC2626" stroke-width="2" stroke-dasharray="3 3"/>
+    <g transform="translate(260, 245)">
+      <rect width="80" height="46" rx="6" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+      <text x="40" y="20" text-anchor="middle" class="node-title" fill="#DC2626">Lab 1</text>
+      <text x="40" y="34" text-anchor="middle" class="node-sub" fill="#DC2626">Cable Cut</text>
+      <line x1="10" y1="10" x2="70" y2="36" stroke="#DC2626" stroke-width="1.5" opacity="0.6"/>
+    </g>
+
+    <!-- Room 4 (Weak / Timeout) -->
+    <line x1="270" y1="135" x2="410" y2="230" stroke="#D97706" stroke-width="2" stroke-dasharray="4 2"/>
+    <g transform="translate(370, 245)">
+      <rect width="80" height="46" rx="6" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1.5"/>
+      <text x="40" y="20" text-anchor="middle" class="node-title" fill="#B45309">Staff Room</text>
+      <text x="40" y="34" text-anchor="middle" class="node-sub" fill="#D97706">Intermittent</text>
+    </g>
+
+    <!-- Pain Points List -->
+    <g transform="translate(20, 316)">
+      <text x="0" y="16" class="status-text" fill="#475569">• Requires ₹50,000+ cabling and repeaters across all rooms</text>
+      <text x="0" y="36" class="status-text" fill="#475569">• If central router restarts or ISP fails, all attendance is lost</text>
+      <text x="0" y="56" class="status-text" fill="#DC2626">• High maintenance cost — rural schools cannot service fragile Wi-Fi</text>
+    </g>
+  </g>
+
+  <!-- ==================== RIGHT PANEL: BLUEMESH SYSTEM ==================== -->
+  <g transform="translate(570, 80)" filter="url(#topoShadow)">
+    <rect width="490" height="400" rx="12" fill="#FFFFFF" stroke="#BAE6FD" stroke-width="1.5"/>
+    
+    <!-- Header -->
+    <rect width="490" height="42" rx="12" fill="#F0F9FF"/>
+    <path d="M0 42 H490" stroke="#BAE6FD" stroke-width="1"/>
+    <text x="20" y="26" class="panel-title" fill="#0284C7">✨ BlueMesh Decentralized Multi-Hop</text>
+    <text x="470" y="26" class="badge" fill="#059669" text-anchor="end">99.9% RELIABLE</text>
+
+    <!-- Mesh Nodes Visual -->
+    <!-- Gateway Node (Top Right) -->
+    <g transform="translate(380, 115)">
+      <circle cx="0" cy="0" r="26" fill="#ECFDF5" stroke="#059669" stroke-width="2.5"/>
+      <text x="0" y="3" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#047857" font-weight="800">GATEWAY</text>
+      <text x="0" y="40" text-anchor="middle" class="node-sub" fill="#059669">1 Internet Uplink</text>
+    </g>
+
+    <!-- Mesh Nodes -->
+    <!-- Node 1 (Room 101) -->
+    <g transform="translate(80, 220)">
+      <circle cx="0" cy="0" r="22" fill="#F0F9FF" stroke="#0284C7" stroke-width="2"/>
+      <text x="0" y="4" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#0369A1" font-weight="800">R-101</text>
+    </g>
+
+    <!-- Node 2 (Room 102 - Down / Offline) -->
+    <g transform="translate(200, 160)">
+      <circle cx="0" cy="0" r="22" fill="#FEF2F2" stroke="#DC2626" stroke-width="2" stroke-dasharray="3 3"/>
+      <text x="0" y="4" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#DC2626" font-weight="800">R-102</text>
+      <text x="0" y="-28" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="9" fill="#DC2626" font-weight="700">NODE DOWN</text>
+    </g>
+
+    <!-- Node 3 (Room 103) -->
+    <g transform="translate(180, 270)">
+      <circle cx="0" cy="0" r="22" fill="#F0F9FF" stroke="#0284C7" stroke-width="2"/>
+      <text x="0" y="4" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#0369A1" font-weight="800">R-103</text>
+    </g>
+
+    <!-- Node 4 (Staffroom) -->
+    <g transform="translate(310, 240)">
+      <circle cx="0" cy="0" r="22" fill="#F5F3FF" stroke="#7C3AED" stroke-width="2"/>
+      <text x="0" y="4" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#6D28D9" font-weight="800">Staff</text>
+    </g>
+
+    <!-- Hop Lines & Self-Healing Reroute Demonstration -->
+    <!-- Normal Path R101 -> R103 (Active Reroute bypassing down node 102) -->
+    <line x1="100" y1="230" x2="160" y2="260" stroke="#0284C7" stroke-width="3"/>
+    <polygon points="155,253 163,261 150,263" fill="#0284C7"/>
+    
+    <!-- Failed attempt line (Dashed red X) -->
+    <line x1="95" y1="205" x2="180" y2="170" stroke="#DC2626" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.6"/>
+
+    <!-- Hop R103 -> Staff -->
+    <line x1="202" y1="265" x2="288" y2="245" stroke="#0284C7" stroke-width="3"/>
+    <polygon points="280,240 290,245 282,252" fill="#0284C7"/>
+
+    <!-- Hop Staff -> Gateway -->
+    <line x1="325" y1="220" x2="368" y2="135" stroke="#059669" stroke-width="3"/>
+    <polygon points="360,140 370,132 369,146" fill="#059669"/>
+
+    <!-- Dynamic Peer Links -->
+    <line x1="80" y1="220" x2="180" y2="270" stroke="#0284C7" stroke-width="1" opacity="0.3"/>
+    <line x1="200" y1="160" x2="380" y2="115" stroke="#DC2626" stroke-width="1" stroke-dasharray="3 3" opacity="0.25"/>
+
+    <!-- Key Advantages List -->
+    <g transform="translate(20, 316)">
+      <text x="0" y="16" class="status-text" fill="#1E293B">• <tspan fill="#0284C7" font-weight="800">Self-Healing Mesh:</tspan> Packets automatically reroute around dead nodes</text>
+      <text x="0" y="36" class="status-text" fill="#1E293B">• <tspan fill="#059669" font-weight="800">Zero In-Room Internet:</tspan> Only single SIM/Gateway needed for entire school</text>
+      <text x="0" y="56" class="status-text" fill="#1E293B">• <tspan fill="#D97706" font-weight="800">Ultra Low Cost:</tspan> Sub-₹350 ESP32 nodes with zero wiring overhead</text>
+    </g>
+  </g>
+</svg>
